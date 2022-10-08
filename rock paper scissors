@@ -1,0 +1,42 @@
+import random
+player=False
+player_score=0
+computer_score=0
+while True:
+    player=input("Rock, Paper or Scissors?").capitalize()
+    print("My choice is",player) 
+    choices=["Rock","Paper","Scissors"]    
+    computer=random.choice(choices)    
+    print("Computer choice is", computer)    
+    if player==computer:
+        print("Tie")
+    elif player=="Rock":
+        if computer=="Paper":
+            print("you lose!",computer,"coveres",player)
+            computer_score+=1
+        else:
+            print("you won!",player,"Smashed",computer)
+            player_score+=1
+    elif player=="Paper":
+        if computer=="Scissors":
+            print("you lose!",computer,"cuts",player)
+            computer_score+=1
+        else:
+            print("you won!",player,"covers",computer)
+            player_score+=1
+    elif player=="Scissors":
+        if computer=="Rock":
+            print("you lose!",computer,"Smashes",player)
+            computer_score+=1
+        else:
+            print("you won!",player,"cuts",computer)
+            player_score+=1
+    elif player=='End':
+        print("Final scores:")
+        print(f"CPU:{computer_score}")
+        print(f"player:{player_score}")
+        if computer_score>player_score:
+            print("computer won the game")
+        else:
+            print("player won the game")
+        break
