@@ -1,8 +1,9 @@
 n=int(input())
-x=0
-while n:
-   d=n%10
-   n=n//10
-   if(d>x):
-       x=d
-print(x)
+c=0
+while n!=0:
+    d=n%10
+    if d>c:
+        c=d
+    n//=10
+print(c)
+    
