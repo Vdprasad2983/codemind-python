@@ -1,13 +1,13 @@
-n=int(input())
-c=len(str(n))
-temp=n
-sum=0
-while n!=0:
+a=int(input())
+n=a
+s=len(str(a))
+c=0
+for i in range(1,len(str(a))+1):
     d=n%10
+    c+=d**s
     n=n//10
-    sum+=d**c
-    c-=1
-if sum==temp:
-    print(True)
+    s-=1
+if c==a:
+    print("True")
 else:
-    print(False)
+    print("False")
