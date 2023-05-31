@@ -1,12 +1,7 @@
 n=int(input())
-n1,n2=0,1
-count=0
-if n==1:
-    print(n1)
-else:
-    while count < n:
-        print(n1,end=" ")
-        n3=n1+n2
-        n1=n2
-        n2=n3
-        count+=1
+l=[]
+l.append(0)
+l.append(1)
+for i in range(2,n):
+    l.append(l[i-1]+l[i-2])
+print(*l)
