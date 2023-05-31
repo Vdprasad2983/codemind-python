@@ -1,11 +1,10 @@
 n=int(input())
-n1,n2=0,1
-n3=n1+n2
-while n3<n:
-    n3=n1+n2
-    n1=n2
-    n2=n3
-if n==n3:
-    print("True")
+l=[]
+l.append(0)
+l.append(1)
+for i in range(2,n+5):
+    l.append(l[i-1]+l[i-2])
+if n in l:
+    print(True)
 else:
-    print("False")
+    print(False)
