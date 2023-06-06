@@ -1,5 +1,5 @@
-m,n=map(int,input().split())
-for i in range(1,m*n+1):
-    if(i%m==0 and i%n==0):
-        print(i)
-        break
+a,b=map(int,input().split())
+m1=[a*i for i in range(1,100)]
+m2=[b*i for i in range(1,100)]
+c=[i for i in m1 if i in m2]
+print(c[0])
