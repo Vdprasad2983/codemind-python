@@ -1,5 +1,5 @@
 import math
-def is_prime(n):
+def prime(n):
     if n==1:
         return False
     s=int(math.sqrt(n))
@@ -7,8 +7,8 @@ def is_prime(n):
         if n%i==0:
             return False
     return True
-m=int(input())
-n=int(input())
-for j in range(m,n+1):
-    if is_prime(j):
-        print(j)
+a=int(input())
+b=int(input())
+for i in range(a,b+1):
+    if prime(i):
+        print(i)
