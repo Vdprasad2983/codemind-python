@@ -1,9 +1,9 @@
 n=int(input())
-sum=0
+d=[]
 for i in range(1,n):
-    if(n%i==0):
-        sum=sum+i
-if(n==sum):
+    if n%i==0:
+        d.append(i)
+if n==sum(d):
     print(True)
 else:
     print(False)
