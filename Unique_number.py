@@ -1,5 +1,8 @@
-n=input()
-if len(set(n))==len(n):
-    print("Unique Number")
+n=int(input())
+s=str(n)
+for i in s:
+    if s.count(i)!=1:
+        print("Not Unique Number")
+        break
 else:
-    print("Not Unique Number")
+    print("Unique Number")
