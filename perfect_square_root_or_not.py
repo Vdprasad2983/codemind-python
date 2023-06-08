@@ -1,7 +1,6 @@
+p=[i*i for i in range(1,100)]
 n=int(input())
-for i in range(n):
-    if(i*i==n):
-        print("True")
-        break
+if n in p:
+    print(True)
 else:
-    print("False")
+    print(False)
